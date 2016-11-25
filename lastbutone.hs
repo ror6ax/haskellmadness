@@ -1,4 +1,4 @@
-lastButOne :: [Int] -> Int
+lastButOne :: [a] -> Maybe a
 lastButOne li = if length li > 2
-                then li !! ((length li) - 2)
-                else 0
+                then Just $ li !! ((length li) - 2)
+                else Nothing
